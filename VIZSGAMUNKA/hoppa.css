@@ -1,0 +1,598 @@
+body, html{
+    margin: 0;
+    font-family: Apple Chancery, cursive;
+  }
+  /*---------------NAVBAR-----------------*/
+  .topnav {
+    z-index: 3;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    border-radius: 15%;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: sticky ;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(122, 85, 37);
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: white ;
+    color: black;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  .nyitva{
+      text-align: center;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .topnav.responsive {position: fixed;
+      z-index: 10;
+  display: block;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      border-radius: 0;
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .nyitva{
+        display: none;
+    }
+  }
+  /*--------------FŐOLDAL-----------------*/
+  .fooldal{
+    height: 100%;
+      padding-top: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .review1, .review2, .review3{
+    font-family: 'ELEGANT', sans-serif;
+    font-size:x-large;
+    font-weight: 600;
+    font-variant: small-caps;
+    background-color: white;
+    border: 5px solid black;
+    box-shadow: 0px 0px 17px 4px #593D25;
+    margin: 15px;
+    padding: 20px;
+  }
+  .reveal{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .reveal2{
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal2.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  #nateberkus{
+    border: 5px solid black;
+    box-shadow: 0px 0px 17px 4px #593D25;  
+  }
+  #michelin{
+    border: 5px solid black;
+    box-shadow: 0px 0px 17px 4px #593D25;
+  }
+  #vajdapierre{
+    border: 5px solid black;
+    box-shadow: 0px 0px 17px 4px #593D25;  
+  }
+  #hoppahatter{
+    width: 75%;
+    border: 5px solid black;
+    box-shadow: 0px 0px 17px 10px #593D25;
+  }
+  @media only screen and (max-width: 900px){
+    #hoppahatter{
+      width: 100vw;
+    }
+  }
+  .carousel-caption h5{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size:xx-large;
+  }
+  .carousel-caption p{
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+  }
+  .reviews{
+      padding-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  /*-----------------asztalfoglalás------------*/
+  #asztalfoglalas{
+    position: relative;
+    font-family:'ELEGANT', sans-serif; 
+    font-size: 25px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 3% 5%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid black;
+    box-shadow: 0px 0px 17px 10px #593D25;
+    background-color: white;
+  }
+  #anchor-asztalfoglalas{
+    position: absolute;
+    top: -12%;
+
+  }
+  #asztalfoglalas div, #asztalfoglalas label, #asztalfoglalas .felhivo{
+    font-weight: bold;
+  }
+  #asztalfoglalas .felhivo{
+    border-bottom: 3px solid black;
+    margin-bottom: 2%;
+  }
+  #megjegy{
+    width: 80%;
+  }
+  #labjegyzet{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-transform: lowercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50%;
+    padding-top: 5%;
+    margin: 0;
+
+  }
+
+  
+/* GOMB */
+.gomb {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 15%;
+  will-change: transform;
+}
+
+.gomb:disabled {
+  pointer-events: none;
+}
+
+.gomb:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.gomb:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+@media  only screen and (max-width:900px){
+  #asztalfoglalas{
+    width: 95%;
+  }
+  #asztalfoglalas form{
+    width: 80%;
+  }
+  #vendnev, #email{
+    width: 100%;
+  }
+  #asztalfoglalas textarea{
+    width: 100%;
+    height: 5%;
+  }
+  .gomb{
+    width: 50%;
+  }
+}
+/*--------------ROLUNK-----------------*/
+#rolunk{
+  color: white;
+  font-family:'ELEGANT', sans-serif;
+  position: relative;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(77, 72, 72);
+  width: 100%;
+  height: 100%;
+}
+#anchor-rolunk{
+  position: absolute;
+  top: -8%;
+}
+#rolunk h2{
+  margin-bottom: 3%;
+  border-bottom: 3px solid white;
+}
+.rolunk-toltelek{
+  display: flex;
+  flex-direction: column 2;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.map{
+  padding-right: 2%;
+  width: 100%;
+  height: 100vh;
+}
+.rolunk-szoveg{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+#chefmanager{
+  filter: grayscale(75%);
+}
+#illusztracio{
+  font-size: 55%;
+}
+@media only screen and (max-width:900px){
+  #rolunk{
+    flex-direction: column;
+  }
+  .rolunk-toltelek{
+    flex-direction: column;
+  }
+  #chefmanager{
+    width: 80vw;
+  }
+  #anchor-rolunk{
+    top: -5%;
+  }
+  .map{
+    margin-bottom: 15px;
+  }
+}
+/*--------------------KAPCSOLAT--------------------*/
+#kapcsolat{
+  font-family:'ELEGANT', sans-serif;
+  color: rgb(255,255,255,.75);
+  padding: 20px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 100%;
+  background-color:black;
+}
+#kapcsolat-lista{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column 3;
+}
+.linkek, .linkek2{
+  font-family: 'Times New Roman', Times, serif;
+}
+.linkek a:link, .linkek2 a:link{
+  text-decoration: none;
+  color: rgb(255,255,255,.5);
+}
+.linkek a:hover, .linkek2 a:hover{
+  text-decoration: none;
+  color: rgb(255,255,255, .75);
+}
+.linkek a:visited, .linkek2 a:visited, .linkek a:active, .linkek2 a:active, .linkek a:visited:hover, .linkek2 a:visited:hover{
+  text-decoration: none;
+  color: rgb(255,255,255, .5);
+}
+.fa-facebook {
+  padding: 15px;
+  font-size: 30px;
+  background: transparent;
+  color: rgba(255, 255, 255, .5);
+}
+.fa-instagram {
+  padding: 15px;
+  font-size: 30px;
+  background: transparent;
+  color: rgba(255, 255, 255, .5);
+}
+@media only screen and (max-width:900px){
+  #kapcsolat-lista img{
+    display: none;
+  }
+}
+/*------------------étlap-----------------*/
+  .etelek{
+    font-family: 'ELEGANT', sans-serif;
+    padding-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .eloetelek, .foetelek, .desszertek{
+    display: flex;
+    flex-direction: column 2;
+    border: thick solid black;
+    box-shadow: 0px 0px 17px 10px #593D25;
+    margin: 10px;
+    padding: 10px;
+    width: 75vw;
+    background-color: white;
+  }
+  .eloetelek{
+    padding-left: 7%;
+  }
+  .levesek .arak{
+    padding-right: 25%;
+  }
+  .hidegek{
+    padding-left: 20px;
+  }
+  .levesek, .hidegek{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    text-align: left;
+  }
+  .foetelek, .desszertek{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  .foetelek-lista{
+    width: 40%;
+  }
+  .arak{
+    font-weight: 600;
+    opacity: .6;
+    font-style: italic;
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+  }
+  .leves1, .hidegek1, .foetel1, .desszert1{
+    font-family: Brush Script MT, cursive;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .etelek span, .italok span{
+    font-family: 'ELEGANT', sans-serif;
+    font-variant: small-caps; font-weight: 800;
+    border-bottom: thin solid black;
+    font-size: 25px;
+    text-align: center;
+    width: 50%;
+    /*border: 5px solid black;
+    color: white;
+    background-color:brown;*/
+  }
+  #kepek img{
+    margin: 10px;
+    border: 5px solid black;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0px 0px 17px 10px #593D25;
+  }
+  .etelek h2, .italok h2{
+    font-family: 'ELEGANT', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  @media only screen and (max-width:900px){
+    .etelek, .italok{
+      z-index: 2;
+    }
+    .etelek span{
+      width: 100%;
+    }
+    .foetelek-lista{
+      padding: 0;
+      margin: 0;
+      width: 80%;
+    }
+    .eloetelek, .foetelek, .desszertek{
+      background-color: rgb(242, 205, 131);
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      width: 90vw;
+    }
+  }
+  /*------------Itallap---------------*/
+
+.italok{
+    font-family: 'ELEGANT', sans-serif;
+    padding-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+.uditok{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border: thick solid black;
+  box-shadow: 0px 0px 17px 10px #593D25;
+  margin: 10px;
+  padding: 10px;
+  width: 75vw;
+  background-color: white;
+}
+
+.udito-lista{
+  width: 100%;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.udito-lista .p1{
+  font-size: 19px;
+}
+.udito-lista span{
+  font-size: 30px;
+}
+.borok{
+  display: flex;
+  flex-direction: column 2;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border: thick solid black;
+  box-shadow: 0px 0px 17px 10px #593D25;
+  margin: 10px;
+  padding: 10px;
+  width: 75vw;
+  background-color: white;
+}
+.feherbor span, .vorosbor span{
+  font-size: 30px;
+}
+.feherbor .p1, .vorosbor .p1{
+  font-size: 19px;
+  font-weight: 700;
+}
+.parlatok{
+  display: flex;
+  flex-direction: column 2;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border: thick solid black;
+  box-shadow: 0px 0px 17px 10px #593D25;
+  margin: 10px;
+  padding: 10px;
+  width: 75vw;
+  background-color: white;
+}
+.palinka span, .vodka span{
+  font-size: 30px;
+}
+.palinka .p1, .vodka .p1{
+  font-size: 19px;
+  font-weight: 700;
+}
+.koktelok{
+  display: flex;
+  flex-direction: column 2;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border: thick solid black;
+  box-shadow: 0px 0px 17px 10px #593D25;
+  margin: 10px;
+  padding: 10px;
+  width: 75vw;
+  background-color: white;
+}
+.classic span, .special span{
+  font-size: 30px;
+}
+.classic .p1, .special .p1{
+  font-size: 19px;
+  font-weight: 700;
+}
+@media only screen and (max-width:900px){
+  .udito1, .udito2{
+    padding-right: 5%;
+    margin: 10px;
+    border-right: 3px solid black;
+  }
+  .feherbor, .palinka, .classic{
+    padding-right: 5%;
+    border-right: 3px solid black;
+  }
+  .uditok, .borok, .koktelok, .parlatok{
+    background-color: rgb(242, 205, 131);
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      width: 90vw;
+  }
+}
+
+  
+  
